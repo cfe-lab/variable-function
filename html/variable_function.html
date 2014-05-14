@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<HTML>
+<head>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+
+<div class="container">
+
+<div class="info">
+	<h1>Instructions</h1>
+	<h2>Description</h2>
+	<p>The variable function analysis performs a statistical test (Mann-Whitney U) on a given set of data.</p>
+	<h2>Data Input</h2>
+		<p>It is easiest to copy and paste data directly from excel, as it will input the tab characters for you</p>
+		<p>The data must be in the form "VAR1 VAR2 VAR3 VALUE", where the gaps are TABS and each line ends in a value &gt; 0 but &lt; 1. 
+			Each VAR can be anything, it could be single base pairs of a gene, e.g. "A C T G 0.4". 
+			The VARs could also be amino acids, allele variants, etc. The VALUE must be the last thing on each line, and must be between 0 and 1. It is a measure
+			of the function of that sequence of VARs as a whole.
+		</p>
+	<h2>Example</h2>
+		<p>Say you are trying to determine if height makes a difference in running speed. Your variables you measure are:</p>
+		<ol>
+			<li>Weight</li>
+			<li>Height</li>
+			<li>Gender</li>
+			<li>Age</li>
+		</ol>
+		<p>You did a low-budget study and measure function as a fixed distance over running time of the individual which is then normalized. 
+			To avoid confusion, heights are prepended with 'h', weights with 'w', and ages with 'a'. Your data is as follows:
+		</p>
+		<table id="example_table">
+		<th>Age</th>
+		<th>Weight</th>
+		<th>Gender</th>
+		<th>Height</th>
+		<th>Function = (Distance/run time)</th>
+		<tr><td>a15</td><td>w100</td><td>Female</td><td>h150</td><td>0.9</td></tr>
+		<tr><td>a15</td><td>w100</td><td>Female</td><td>h130</td><td>0.5</td></tr>
+		<tr><td>a15</td><td>w100</td><td>Female</td><td>h100</td><td>0.2</td></tr>
+		<tr><td>a15</td><td>w100</td><td>Female</td><td>h95</td><td>0.21</td></tr>
+		<tr><td>a15</td><td>w100</td><td>Female</td><td>h140</td><td>0.8</td></tr>
+		</table>
+		<p>You can copy and paste the table (not including the headers) into the text area and click submit to get medians, counts, and p-values that will 
+			list each category and assign it a p-value based on whether or not the presence or absense of that variable makes a significant difference on the function
+		</p>
+</div>
+
+<form action="../../dan-bin/variable_function.py" method="post" id="form">
+	<textarea placeholder="Enter data here" name="textinput" form="form" required></textarea>
+	<!-- <input type="file" name="datafile" size="40"> -->
+	<input class="button orange" id="submit_button" type="submit" name="run">
+	<input class="button blue" id="submit_button" type="submit" name="csv" value="Download CSV">
+</form>
+</div>
+
+</HTML>
