@@ -1,3 +1,7 @@
+#submit_button {
+	margin-bottom: 10px;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -671,19 +675,7 @@
 body * {
   font-size: 14px;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box; }
-
-h1 {
-  font-size: 24px; }
-
-h2 {
-  font-size: 20px; }
-
-h3 {
-  font-size: 18px; }
 
 ol {
   margin-left: 20px; }
@@ -859,3 +851,30 @@ textarea {
 
 div[class*='col-'].description {
   font-style: italic; }
+
+/*---------- my additions are under this bar ----------*/
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h1, .h1 {
+    font-size: 36px;
+}
+
+h2, .h2 {
+    font-size: 30px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+
